@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopStreams - Streaming de Cinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">PopStreams</div>
+        <button class="menu-toggle" id="menu-btn">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#" class="nav-item">Início</a></li>
+            <li><a href="#filmes" class="nav-item">Filmes</a></li>
+            <li><a href="#" class="nav-item">Séries</a></li>
+            <li><a href="#" class="nav-item">Minha Lista</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">O Resgate</h1>
+            <p class="hero-description">Uma equipe de exploradores viaja através de um buraco de minhoca no espaço em uma tentativa de garantir a sobrevivência da humanidade.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-play">▶ Assistir</button>
+                <button class="btn btn-info">ℹ Mais Informações</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog" id="filmes">
+        <h2 class="catalog-title">Populares no PopStreams</h2>
+        <div class="grid-container">
+            
+            <div class="movie-card">
+                <img src="https://f.i.uol.com.br/fotografia/2020/04/23/15876707905ea1ef0635b66_1587670790_3x2_md.jpg" alt="Filme 1" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">O Resgate</h3>
+                    <span class="movie-rating">⭐ 4.8</span>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6xW1P49m2JbOxQpmMEUJFELDQytzWU7lHBI0lDOkhxw&s" alt="Filme 2" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">A Origem</h3>
+                    <span class="movie-rating">⭐ 4.9</span>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS8rT6bSS-LAzkUmB96RonXVTkiELbrUQLPOWxOxb1gQ&s=10" alt="Filme 3" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Sem Tempo</h3>
+                    <span class="movie-rating">⭐ 4.5</span>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjWNdn--lYOQ6UqSho8MVX_V4fgt3ShWoODYZKbyQGmA&s=10" alt="Filme 4" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Cidade Fantasma</h3>
+                    <span class="movie-rating">⭐ 4.2</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
